@@ -1,6 +1,4 @@
-from flask import Flask
-
-app = Flask(__name__)
+from __init__ import app # pylint: disable=no-name-in-module
 
 @app.route("/")
 def hello():
