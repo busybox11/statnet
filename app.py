@@ -1,8 +1,4 @@
-from __init__ import app # pylint: disable=no-name-in-module
-
-@app.route("/")
-def hello():
-    return "Hello World!"
+from __init__ import app
 
 if __name__ == "__main__":
     app.run(debug=True)
