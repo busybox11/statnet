@@ -19,8 +19,21 @@
 			fetch('/api/stats').then(function(response) {
 				response.json().then(function(json) {
 					document.getElementById('interface').innerHTML = json.interface
-					document.getElementById('down').innerHTML = (json.down / 1024 / 1024).toFixed(2)
-					document.getElementById('up').innerHTML = (json.up / 1024 / 1024).toFixed(2)
+					if (json.down <= 1000000 || json.down == 0) {
+						document.getElementById('down_nb').innerHTML = (json.down / 1024).toFixed(2)
+						document.getElementById('down_unit').innerHTML = "KB/s"
+					} else {
+						document.getElementById('down_nb').innerHTML = (json.down / 1024 / 1024).toFixed(2)
+						document.getElementById('down_unit').innerHTML = "MB/s"
+					}
+
+					if (json.up <= 1000000 || json.up == 0) {
+						document.getElementById('up_nb').innerHTML = (json.up / 1024).toFixed(2)
+						document.getElementById('up_unit').innerHTML = "KB/s"
+					} else {
+						document.getElementById('up_nb').innerHTML = (json.up / 1024 / 1024).toFixed(2)
+						document.getElementById('up_unit').innerHTML = "MB/s"
+					}
 				})
 			})
 		}, 1000);
@@ -32,11 +45,11 @@
 	<div style="display: flex">
 		<div class="stat-monitor">
 			<h3 class="monitor-title">Download</h3>
-			<span><span id="down">0</span> MB/s</span>
+			<span><span id="down_nb">0</span> <span id="down_unit">MB/s</span></span>
 		</div>
 		<div class="stat-monitor">
 			<h3 class="monitor-title">Upload</h3>
-			<span><span id="up">0</span> MB/s</span>
+			<span><span id="up_nb">0</span> <span id="up_unit">MB/s</span></span>
 		</div>
 	</div>
 </body>
