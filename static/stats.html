@@ -3,6 +3,17 @@
 <head>
 	<title>Network stats</title>
 
+	<style>
+		.stat-monitor {
+			margin: 1rem;
+			width: 10rem;
+		}
+
+		.monitor-title {
+			margin-top: 0;
+		}
+	</style>
+
 	<script>
 		setInterval(function(){ 
 			fetch('/api/stats').then(function(response) {
@@ -18,10 +29,15 @@
 <body>
 	<h1>Network stats</h1>
 	<h4>Interface: <span id="interface">not connected</span></h4>
-	<h3>Download</h3>
-	<span><span id="down">0</span> MB/s</span>
-	<hr>
-	<h3>Upload</h3>
-	<span><span id="up">0</span> MB/s</span>
+	<div style="display: flex">
+		<div class="stat-monitor">
+			<h3 class="monitor-title">Download</h3>
+			<span><span id="down">0</span> MB/s</span>
+		</div>
+		<div class="stat-monitor">
+			<h3 class="monitor-title">Upload</h3>
+			<span><span id="up">0</span> MB/s</span>
+		</div>
+	</div>
 </body>
 </html>
