@@ -35,6 +35,14 @@
 						document.getElementById('up_unit').innerHTML = "MB/s"
 					}
 				})
+			}).catch(function(error) {
+				document.getElementById('interface').innerHTML = "DISCONNECTED"
+
+				document.getElementById('down_nb').innerHTML = 0.00
+				document.getElementById('down_unit').innerHTML = "KB/s"
+
+				document.getElementById('up_nb').innerHTML = 0.00
+				document.getElementById('up_unit').innerHTML = "KB/s"
 			})
 		}, 1000);
 	</script>
