@@ -5,4 +5,4 @@ if __name__ == "__main__":
 
 @app.route("/")
 def root():
-    return "Hello World!"
+    return app.send_static_file('stats/stats.html')
