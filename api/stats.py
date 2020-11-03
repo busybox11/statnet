@@ -1,6 +1,5 @@
 from . import api
 from flask import jsonify
-import json
 from multiprocessing import Process
 import pickle
 
