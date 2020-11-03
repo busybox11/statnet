@@ -1,4 +1,6 @@
 from . import api
+from flask import jsonify
+import json
 from multiprocessing import Process
 import pickle
 
@@ -46,5 +48,4 @@ def stats():
         up = stats[1]
         down = stats[2]
     
-    print(stats)
-    return "Yay, stats!"
+    return jsonify({"interface": interface, "up": up[0] - up[1], "down": down[0] - down[1]})
