@@ -3,4 +3,4 @@ Real-time network stats in Python
 
 ## Dependencies
 - `python3`
-- pip package: `psutil`
+- pip packages: `psutil`, `flask` (with `Blueprint`), `multiprocessing`, `pickle`
