@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Network stats</title>
+
+	<script>
+		setInterval(function(){ 
+			fetch('/api/stats').then(function(response) {
+				response.json().then(function(json) {
+					document.getElementById('interface').innerHTML = json.interface
+					document.getElementById('down').innerHTML = (json.down / 1024 / 1024).toFixed(2)
+					document.getElementById('up').innerHTML = (json.up / 1024 / 1024).toFixed(2)
+				})
+			})
+		}, 1000);
+	</script>
+</head>
+<body>
+	<h1>Network stats</h1>
+	<h4>Interface: <span id="interface">not connected</span></h4>
+	<h3>Download</h3>
+	<span><span id="down">0</span> MB/s</span>
+	<hr>
+	<h3>Upload</h3>
+	<span><span id="up">0</span> MB/s</span>
+</body>
+</html>
