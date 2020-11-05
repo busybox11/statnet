@@ -26,9 +26,23 @@ body {
 	padding: 0 1.5rem;
 }
 
+#interface {
+	margin-left: .3rem;
+}
+
+@media only screen and (min-width: 495px) {
+	.stat-monitors {
+		display: flex;
+	}
+
+	.stat-monitor {
+		width: 13rem;
+	}
+}
+
 .stat-monitor {
 	margin: 1rem 1rem 1rem 0;
-	width: 13rem;
+	width: 100%;
 
 	background: #0c0c0c;
 	padding: 1rem 1.25rem;
