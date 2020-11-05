@@ -29,12 +29,16 @@ body {
 	width: 13rem;
 
 	background: #0c0c0c;
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px #00000030;
+	padding: 1rem 1.5rem;
+	border-radius: 1rem;
+	box-shadow: 0 4px 8px #00000030;
 }
 
 .monitor-title {
 	margin: 0;
 	margin-bottom: .5rem;
+}
+
+.monitor-nb {
+	font-variant-numeric: proportional-nums;
 }
