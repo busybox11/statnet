@@ -36,6 +36,16 @@ body {
 	box-shadow: 0 4px 8px #00000030;
 }
 
+#download-monitor {
+	border: 4px solid #00005f;
+    background: #000038;
+}
+
+#upload-monitor {
+	border: 4px solid #5f0000;
+    background: #380000;
+}
+
 .monitor-title {
 	margin: 0;
 	margin-bottom: .5rem;
