@@ -34,6 +34,12 @@ body {
 	padding: 1rem 1.25rem;
 	border-radius: 1rem;
 	box-shadow: 0 4px 8px #00000030;
+
+	transition: all .25s;
+}
+
+.stat-monitor:hover {
+	transform: scale(1.025);
 }
 
 #download-monitor {
@@ -41,9 +47,17 @@ body {
     background: #000038;
 }
 
+#download-monitor:hover {
+    background: #00005f;
+}
+
 #upload-monitor {
 	border: 4px solid #5f0000;
     background: #380000;
+}
+
+#upload-monitor:hover {
+    background: #5f0000;
 }
 
 .monitor-title {
