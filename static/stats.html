@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
 	<title>Network stats</title>
 
 	<link rel="stylesheet" href="stats.css">
 </head>
 <body>
-	<h1>Network stats</h1>
-	<h4>Interface: <span id="interface">not connected</span></h4>
-	<div style="display: flex">
-		<div class="stat-monitor">
-			<h3 class="monitor-title">Download</h3>
-			<span><span id="down_nb">0</span> <span id="down_unit">MB/s</span></span>
+	<div class="header">
+		<div class="container">
+			<h1>Network stats</h1>
 		</div>
-		<div class="stat-monitor">
-			<h3 class="monitor-title">Upload</h3>
-			<span><span id="up_nb">0</span> <span id="up_unit">MB/s</span></span>
+	</div>
+	<div class="container">
+		<h4>Interface: <span id="interface">not connected</span></h4>
+		<div style="display: flex">
+			<div class="stat-monitor">
+				<h3 class="monitor-title">Download</h3>
+				<span><span id="down_nb">0</span> <span id="down_unit">MB/s</span></span>
+			</div>
+			<div class="stat-monitor">
+				<h3 class="monitor-title">Upload</h3>
+				<span><span id="up_nb">0</span> <span id="up_unit">MB/s</span></span>
+			</div>
 		</div>
 	</div>
 
