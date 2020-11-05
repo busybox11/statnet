@@ -51,6 +51,11 @@ body {
 	margin-bottom: .5rem;
 }
 
+.monitor-values {
+	display: flex;
+}
+
 .monitor-nb {
 	font-variant-numeric: proportional-nums;
+	margin-right: auto;
 }
