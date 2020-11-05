@@ -3,16 +3,21 @@
 <head>
 	<title>Network stats</title>
 
-	<style>
-		.stat-monitor {
-			margin: 1rem;
-			width: 10rem;
-		}
-
-		.monitor-title {
-			margin-top: 0;
-		}
-	</style>
+	<link rel="stylesheet" href="stats.css">
+</head>
+<body>
+	<h1>Network stats</h1>
+	<h4>Interface: <span id="interface">not connected</span></h4>
+	<div style="display: flex">
+		<div class="stat-monitor">
+			<h3 class="monitor-title">Download</h3>
+			<span><span id="down_nb">0</span> <span id="down_unit">MB/s</span></span>
+		</div>
+		<div class="stat-monitor">
+			<h3 class="monitor-title">Upload</h3>
+			<span><span id="up_nb">0</span> <span id="up_unit">MB/s</span></span>
+		</div>
+	</div>
 
 	<script>
 		setInterval(function(){ 
@@ -46,19 +51,5 @@
 			})
 		}, 1000);
 	</script>
-</head>
-<body>
-	<h1>Network stats</h1>
-	<h4>Interface: <span id="interface">not connected</span></h4>
-	<div style="display: flex">
-		<div class="stat-monitor">
-			<h3 class="monitor-title">Download</h3>
-			<span><span id="down_nb">0</span> <span id="down_unit">MB/s</span></span>
-		</div>
-		<div class="stat-monitor">
-			<h3 class="monitor-title">Upload</h3>
-			<span><span id="up_nb">0</span> <span id="up_unit">MB/s</span></span>
-		</div>
-	</div>
 </body>
 </html>

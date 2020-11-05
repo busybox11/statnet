@@ -1,0 +1,14 @@
+body {
+	background: black;
+	color: white;
+	font-family: sans-serif;
+}
+
+.stat-monitor {
+	margin: 1rem;
+	width: 10rem;
+}
+
+.monitor-title {
+	margin-top: 0;
+}
