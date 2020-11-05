@@ -65,6 +65,17 @@ body {
 	margin-bottom: .5rem;
 }
 
+.monitor-title,
+.interface-title {
+	display: flex;
+	align-items: center;
+}
+
+.monitor-icon,
+.interface-icon {
+	margin-right: .5rem;
+}
+
 .monitor-values {
 	display: flex;
 }
